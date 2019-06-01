@@ -1,0 +1,19 @@
+version: '3.2'
+
+services:
+
+  node:
+    image: node:carbon-alpine
+    volumes:
+      - .:/mnt
+    working_dir: /mnt
+
+  cypress:
+    command: npm run start
+    build: .
+    environment:
+      - DISPLAY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - .:/e2e
+    working_dir: /e2e

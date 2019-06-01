@@ -1,0 +1,15 @@
+{
+  "name": "cypress-docker-template",
+  "version": "0.0.1",
+  "description": "An example of Dockerized Cypress for e2e testing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "$(npm bin)/cypress run --browsers chrome",
+    "start": "$(npm bin)/cypress open --project ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^3.3.1"
+  }
+}
